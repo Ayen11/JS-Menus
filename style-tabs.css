@@ -28,6 +28,7 @@ body {
   justify-content: space-around;
   align-items: center;
   border-bottom: 2px solid rgba(53, 53, 53, 0.13);
+  position: relative;
 }
 
 .tab_box .tab_btn {
@@ -38,4 +39,47 @@ body {
   border: none;
   cursor: pointer;
   padding: 18px;
+}
+
+.content_box {
+  padding: 20px;
+}
+
+.content_box .content {
+  display: none;
+  animation: moving 0.5s ease;
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.content_box .content.active {
+  display: block;
+}
+
+.content_box .content h2 {
+  margin-bottom: 10px;
+}
+
+.tab_box .tab_btn.active {
+  color: #7360ff;
+}
+
+.line {
+  position: absolute;
+  top: 56px;
+  left: 33px;
+  width: 77px;
+  height: 5px;
+  background-color: #7360ff;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
