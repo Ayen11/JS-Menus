@@ -12,43 +12,6 @@
   color: #525252;
 }
 
-nav {
-  background: #1a1a1a;
-  width: 100%;
-  padding: 10px 10%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-
-nav ul {
-  width: 100%;
-  text-align: right;
-}
-
-nav ul li {
-  display: inline-block;
-  list-style: none;
-  margin: 10px 20px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.logo {
-  width: 120px;
-}
-
-.user-pic {
-  width: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  margin-left: 30px;
-}
-
 .sub-menu-wrap {
   position: absolute;
   top: 100%;
@@ -57,24 +20,48 @@ nav ul li a {
 }
 
 .sub-menu-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #fff;
   padding: 20px;
   margin: 10px;
+  width: 320px;
+  max-height: 00px;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  border-radius: 5px;
+  visibility: hidden;
 }
 
-.user-info {
+.sub-menu-wrap.open-menu {
+  max-height: 400px;
+  visibility: visible;
+}
+
+.button-dropdown {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: larger;
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  width: 320px;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.user-info h3 {
-  font-weight: 500;
-}
-
-.user-info img {
-  width: 60px;
-  border-radius: 50%;
-  margin-right: 15px;
+.button-dropdown:hover {
+  font-weight: 600;
 }
 
 .sub-menu hr {
@@ -83,4 +70,29 @@ nav ul li a {
   width: 100%;
   background: #ccc;
   margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #525252;
+  margin: 12px;
+}
+
+.sub-menu-link p {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.sub-menu-link img {
+  width: 40px;
+  background: #e5e5e5;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
+}
+
+.sub-menu-link:hover p {
+  font-weight: 600;
 }

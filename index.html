@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewprt" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript Menus</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="hero">
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <img src="Images/Dropdown/user.png" class="user-pic" />
-        <div class="sub-menu-wrap">
-          <div class="sub-menu">
-            <div class="user-info">
-              <img src="Images/Dropdown/user.png" />
-              <h2>Ayen Neuman</h2>
-            </div>
-            <hr />
-
-            <a href="#" class="sub-menu-link">
-              <img src="Images/Dropdown/profile.png" />
-              <p>Edit Profile</p>
-            </a>
+      <div class="button-dropdown" onclick="toggleMenu()">Press Me</div>
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <h2>Choose a Menu Style</h2>
           </div>
+          <hr />
+          <a href="#" class="sub-menu-link">
+            <p>Drop Down Menu</p>
+            <span></span>
+          </a>
+          <a href="#" class="sub-menu-link">
+            <p>Tabs Menu</p>
+            <span></span>
+          </a>
+          <a href="#" class="sub-menu-link">
+            <p>Image Slider</p>
+            <span></span>
+          </a>
         </div>
-      </nav>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
